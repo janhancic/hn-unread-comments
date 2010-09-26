@@ -9,12 +9,17 @@
 	},
 	"content_scripts": [
 		{
-			"matches": ["http://news.ycombinator.com/item?id=*"],
+			"matches": [
+				"http://news.ycombinator.com/item?id=*",
+				"http://news.ycombinator.com/threads?id=*"
+			],
 			"js": [
 				"jquery.js",
 				"script.js"
 			]
 		}
 	],
-	"permissions": []
+	"permissions": [
+		"unlimitedStorage"
+	]
 }

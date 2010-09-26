@@ -13,14 +13,14 @@ Storage.prototype.getObject = function ( key ) {
 	return JSON.parse ( item );
 };
 
-// ID of this news story
-var newsItemId = document.location + '';
-newsItemId = newsItemId.substr ( newsItemId.indexOf ( '=' ) + 1 );
+// get the background colour of the top navigation bar
+var unreadColour = $( 'table:first td:first' ).attr ( 'bgcolor' );
 
+// get all comments (anchors) on this page
 var $comments = $( "a[id^='up']:gt(0)" );
 
-var readComments = localStorage.getObject ( 'item_' + newsItemId );
-
+// get all stored unread comments
+var readComments = localStorage.getObject ( 'read_comments' );
 if ( readComments === undefined || readComments === null ) {
 	readComments = {};
 }
@@ -29,9 +29,11 @@ $comments.each ( function () {
 	var $this = $( this );
 
 	if ( readComments[$this.attr ( 'id' )] === undefined ) {
-		$this.parents ( 'table:first' ).find ( 'td:eq(2)' ).css ( 'border', '1px solid #F60' );
+		// mark this comments as unread
+		$this.parents ( 'table:first' ).find ( 'td:eq(2)' ).css ( 'border', '1px solid ' + unreadColour );
+
 		readComments[$this.attr ( 'id' )] = true;
 	}
 } );
 
-localStorage.setObject ( 'item_' + newsItemId, readComments );
+localStorage.setObject ( 'read_comments', readComments );
