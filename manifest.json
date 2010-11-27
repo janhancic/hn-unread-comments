@@ -15,6 +15,7 @@
 			],
 			"js": [
 				"jquery.js",
+				"phpjs.js",
 				"script.js"
 			]
 		}
