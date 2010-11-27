@@ -1,6 +1,6 @@
 {
 	"name": "HN Unread Comments",
-	"version": "1.0",
+	"version": "1.1",
 	"description": "Shows unread comments on Hacker News (http://news.ycombinator.com/)",
 	"icons": {
 		"16": "icon16.png",
