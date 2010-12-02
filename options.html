@@ -6,7 +6,66 @@
 		<link rel="stylesheet" href="options.css" type="text/css" />
 	</head>
 	<body>
-		<span>dummy options page</span>
+		<div id="TopContainer">
+			<img src="logo_no_border.png" title="HN Unread Comments" id="Logo" />
+			<div id="OptionsContainer">
+				<h1>HN Unread Comments options</h1>
+				<p>Specify how you want unread comments to be highlighted.</p>
+				<h3>Border around comment</h3>
+				<input type="radio" name="rbBorder" id="rbBorder_0" value="0" /> <label for="rbBorder_0">no border</label><br />
+				<input type="radio" name="rbBorder" id="rbBorder_1" value="1" /> <label for="rbBorder_1">show border</label>
+				<div style="margin-left: 20px;">
+					colour: <input type="text" id="txtBorderColour" value="" /><br />
+					width: <input type="number" id="txtBorderThickness" min="1" max="10" value="" />px<br />
+					style: 
+					<select id="sbBorderStyle">
+						<option value="dotted">dotted</option>
+						<option value="dashed">dashed</option>
+						<option value="solid">solid</option>
+						<option value="double">double</option>
+						<option value="groove">groove</option>
+						<option value="ridge">ridge</option>
+						<option value="inset">inset</option>
+						<option value="outset">outset</option>
+					</select>
+				</div>
+				<br />
+				<h3>Comment font</h3>
+				<input type="radio" name="rbFont" id="rbFont_0" value="0" /> <label for="rbFont_0">no change</label><br />
+				<input type="radio" name="rbFont" id="rbFont_1" value="1" /> <label for="rbFont_1">style font</label>
+				<div style="margin-left: 20px;">
+					colour: <input type="text" id="txtFontColour" value="" /><br />
+					size: <input type="number" id="txtBorderThickness" min="8" max="20" value="" />px<br />
+					weight: 
+					<select id="sbFontWeight">
+						<option value="normal">normal</option>
+						<option value="bold">bold</option>
+						<option value="bolder">bolder</option>
+						<option value="lighter">lighter</option>
+					</select>
+				</div>
+
+				<br />
+				<input type="button" id="btnSaveOptions" value="save options" />
+			</div>
+		</div>
+		<h2>Preview</h2>
+		<div id="PreviewContainer">
+			<img src="grayarrow.gif" id="Arrow" />
+			<div id="Comment">
+				<div id="CommentHeader">42 points by d.adams 1 hour ago | link</div>
+				There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will instantly disappear and be replaced by something even more bizarre and inexplicable.
+				<br />There is another theory which states that this has already happened.
+				<div id="Reply">reply</div>
+			</div>
+		</div>
+
+		<h2>What's new?</h2>
+		<ul>
+			<li>unicorns</li>
+			<li>double rainbows</li>
+			<li>fucking magnets</li>
+		</ul>
 
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="options.js"></script>

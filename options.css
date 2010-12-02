@@ -1,3 +1,65 @@
-span {
-	color: red;
+body {
+	margin-left: auto;
+	margin-right: auto;
+	width: 620px;
+
+	font-family: Helvetica;
+}
+
+h1, h2, h3 {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+h3 {
+	margin-bottom: 5px;
+}
+
+#TopContainer {
+	overflow: hidden;
+}
+
+#Logo {
+	float: left;
+	width: 122px;
+}
+
+#OptionsContainer {
+	float: left;
+	margin-left: 20px;
+}
+
+#PreviewContainer, #WhatsNewContainer {
+	width: 620px;
+}
+
+#PreviewContainer {
+	background-color: #F6F6EF;
+	font-family: Verdana;
+	overflow: hidden;
+	padding: 10px;
+}
+
+#Arrow {
+	float: left;
+	width: 10px;
+}
+
+#Comment {
+	float: left;
+	font-size: 9pt;
+	width: 600px;
+	margin-left: 10px;
+}
+
+#CommentHeader {
+	font-size: 8pt;
+	color: #828282;
+	margin-bottom: 5px;
+}
+
+#Reply {
+	text-decoration: underline;
+	margin-top: 5px;
+	font-size: 7pt;
 }
