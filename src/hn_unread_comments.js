@@ -1,32 +1,23 @@
 //localStorage.clear (); // for testing purposes
 
-// remove old read comments storage
-localStorage.removeItem( 'read_comments' );
+localStorage.removeItem( 'read_comments' ); // remove old read comments storage
 
-// get the background colour of the top navigation bar
-var unreadColour = $( 'table:first td:first' ).attr( 'bgcolor' );
+var unreadColour = $( 'table:first td:first' ).attr( 'bgcolor' ), // background colour of the top navigation bar
+	$comments = null,
+	readComments;
 
 // get all comments on this page
-var $comments = null;
-
-if ( ( document.location + '' ).indexOf ( 'item?id=' ) > 0 ) {
-	// we are on a item page
+if ( ( document.location + '' ).indexOf ( 'item?id=' ) > 0 ) { // we are on a item page
 	$comments = $( 'body > center > table > tbody > tr:eq(2) > td table:eq(1) > tbody > tr' );
-} else {
-	// we are on threads page
+} else { // we are on threads page
 	$comments = $( 'body > center > table > tbody > tr:gt(2)' );
 }
 
-// get all stored unread comments
-var readComments = localStorage.getObject( 'read_comments_list' );
-if ( readComments == null ) {
-	readComments = {};
-}
+readComments = localStorage.getObject( 'read_comments_list' ) || {}; // get all stored unread comments
 
 $comments.each( function () {
-	var $this = $( this );
-
-	var commentContentMd5 = md5( $this.find( 'table td:eq(2) span.comment' ).text() );
+	var $this = $( this ),
+		commentContentMd5 = md5( $this.find( 'table td:eq(2) span.comment' ).text() );
 
 	if ( readComments[commentContentMd5] === undefined ) {
 		// mark this comments as unread
