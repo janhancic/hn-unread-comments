@@ -12,8 +12,8 @@
 	"content_scripts": [
 		{
 			"matches": [
-				"http://news.ycombinator.com/item?id=*",
-				"http://news.ycombinator.com/threads?id=*"
+				"https://news.ycombinator.com/item?id=*",
+				"https://news.ycombinator.com/threads?id=*"
 			],
 			"js": [
 				"lib/jquery.js",
