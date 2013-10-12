@@ -18,6 +18,7 @@
 			"js": [
 				"lib/jquery.js",
 				"lib/phpjs.js",
+				"lib/storage_object.js",
 				"src/hn_unread_comments.js"
 			]
 		}

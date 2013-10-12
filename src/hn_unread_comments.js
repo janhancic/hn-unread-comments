@@ -3,20 +3,6 @@
 // remove old read comments storage
 localStorage.removeItem( 'read_comments' );
 
-Storage.prototype.setObject = function( key, value ) {
-	this.setItem( key, JSON.stringify( value ) );
-};
-
-Storage.prototype.getObject = function ( key ) {
-	var item = this.getItem( key );
-
-	if ( item === undefined ) {
-		return undefined;
-	}
-
-	return JSON.parse( item );
-};
-
 // get the background colour of the top navigation bar
 var unreadColour = $( 'table:first td:first' ).attr( 'bgcolor' );
 
@@ -33,7 +19,7 @@ if ( ( document.location + '' ).indexOf ( 'item?id=' ) > 0 ) {
 
 // get all stored unread comments
 var readComments = localStorage.getObject( 'read_comments_list' );
-if ( readComments === undefined || readComments === null ) {
+if ( readComments == null ) {
 	readComments = {};
 }
 
