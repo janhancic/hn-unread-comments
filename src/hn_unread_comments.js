@@ -21,7 +21,7 @@ $comments.each( function () {
 
 	if ( readComments[commentContentMd5] === undefined ) {
 		// mark this comments as unread
-		$this.find( 'table td:eq(2)' ).css( 'border', '1px solid ' + unreadColour );
+		$this.find( 'table td:eq(2)' ).css( 'border-left', '2px solid ' + unreadColour );
 
 		readComments[commentContentMd5] = true;
 	}
