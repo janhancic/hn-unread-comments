@@ -16,3 +16,5 @@ I'm planning on adding the following features to the next (v2.0) release:
 
 ## License
 Licensed under MIT. See [LICENSE.md](https://github.com/janhancic/hn-unread-comments/blob/master/LICENSE.md) file for details.
+
+[![Code Climate](https://codeclimate.com/github/janhancic/hn-unread-comments.png)](https://codeclimate.com/github/janhancic/hn-unread-comments)
